@@ -37,7 +37,6 @@ def stack(circle_xy, size, a, b, center, N, axes_visible=False):
         bot_hemi_y = np.negative(circle_xy[..., 1]) - copy
         circles = pyplot.plot(x_values, top_hemi_y, x_values, bot_hemi_y)
         pyplot.setp(circles, color='0')
-    return circle_set
 
 
 def scatter(N, subints, a, b, spread):
