@@ -20,3 +20,5 @@ num_circles = 3
 circle_set = picture.stack(circle, (6, 6), -10., 10., center, num_circles)
 ray_set = picture.scatter(1, 1000, 0., center, 0.)
 
+
+I added this
