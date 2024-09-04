@@ -17,5 +17,5 @@ circle = circle.perimeter(1., 0., 1000)
 center = 8.
 num_circles = 100
 
-fig, ax = picture.stack(circle, (2, 2), -10., 10., center, num_circles)
-rays = picture.scatter(2, 1000, 0., center, 3.)
+Lfig, ax = picture.stack(circle, (6, 6), -10., 10., center, num_circles)
+rays = picture.scatter(23, 1000, 0., center, 3.)

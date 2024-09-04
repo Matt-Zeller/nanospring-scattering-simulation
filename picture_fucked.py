@@ -37,18 +37,17 @@ def stack(circle_xy, size, a, b, center, N, axes_visible=False):
         bot_hemi_y = np.negative(circle_xy[..., 1]) - copy
         circles = pyplot.plot(x_values, top_hemi_y, x_values, bot_hemi_y)
         pyplot.setp(circles, color='0')
-    return fig
 
 
 def scatter(N, subints, a, b, spread):
     rng = np.random.default_rng()
     randoms = rng.uniform(low=-1., high=1., size=(N, 2))
-    ray_set = np.zeros((N, subints, 2))
+    ray_set = np.zeros(N)
     for n in range(N):
         slope = randoms[n, 0]
         intercept = spread*randoms[n, 1]
         ray_array = ray.line(slope, intercept, subints, a, b)
-        ray_set[n] = ray_array
+        ray_stack = ray_array
         ray_draw = pyplot.plot(ray_array[..., 0], ray_array[..., 1], 'b')
         pyplot.setp(ray_draw, color='0')
     return ray_set

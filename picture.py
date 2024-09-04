@@ -10,11 +10,11 @@ import ray
 from matplotlib import pyplot
 
 
-def space(size, a, b, axes_visible=False):
-    """Display the coordinate space before any objects are added."""
-    fig = pyplot.figure(figsize=size)
-    ax = pyplot.axis(xmin=a, xmax=b, ymin=a, ymax=b)
-    ax = pyplot.axis(axes_visible)
+# def space(size, a, b, axes_visible=False):
+#     """Display the coordinate space before any objects are added."""
+#     fig = pyplot.figure(figsize=size)
+#     ax = pyplot.axis(xmin=a, xmax=b, ymin=a, ymax=b)
+#     ax = pyplot.axis(axes_visible)
 
 
 def stack(circle_xy, size, a, b, center, N, axes_visible=False):
@@ -37,7 +37,7 @@ def stack(circle_xy, size, a, b, center, N, axes_visible=False):
         bot_hemi_y = np.negative(circle_xy[..., 1]) - copy
         circles = pyplot.plot(x_values, top_hemi_y, x_values, bot_hemi_y)
         pyplot.setp(circles, color='0')
-    return fig
+    return fig, ax
 
 
 def scatter(N, subints, a, b, spread):
